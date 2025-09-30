@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/avg_speedCalculator.dart';
+// import 'package:flutter_application_1/page/lab1_avg_speedCalculator.dart';
+import 'package:flutter_application_1/page/lab2_homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home: AVGSpeedCalculatorPage(title: 'Flutter Demo Home Page'),
+      // home: AVGSpeedCalculatorPage(title: 'AVGSpeedCalculator'),
+      home: HomePage(),
     );
   }
 }
