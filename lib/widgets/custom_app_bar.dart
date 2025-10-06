@@ -7,6 +7,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final IconData actionIcon;
   final VoidCallback onLeadingPressed;
   final VoidCallback onActionPressed;
+  final Widget? titleWidget; 
 
   const CustomAppBar({
     super.key,
@@ -14,12 +15,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     required this.actionIcon,
     required this.onLeadingPressed,
     required this.onActionPressed,
+    this.titleWidget,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      // backgroundColor: Colors.red,
       elevation: 0,
       leadingWidth: AppStyles.buttonSize + AppStyles.horizontalPadding,
       leading: Center(
@@ -32,6 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
+      title: titleWidget, // ← poți pune orice Widget
       actions: [
         Center(
           child: Padding(

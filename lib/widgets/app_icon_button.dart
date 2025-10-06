@@ -32,7 +32,6 @@ class AppIconButton extends StatelessWidget {
             ? BorderRadius.circular(AppStyles.buttonSize / 2) // cerc
             : BorderRadius.circular(10), // dreptunghi
         child: Material(
-          color: Colors.transparent,
           child: InkWell(
             onTap: onPressed,
             child: Padding(
