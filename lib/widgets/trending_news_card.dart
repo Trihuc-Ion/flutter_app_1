@@ -28,7 +28,7 @@ class TrendingNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: AppStyles.verticalPadding, left: AppStyles.horizontalPadding),
+      padding: EdgeInsets.only(top: AppStyles.verticalPadding),
       child: SizedBox(
         height: 344,
         child: Column(

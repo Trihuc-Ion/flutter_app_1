@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/styles/app_styles.dart';
-import 'package:flutter_application_1/widgets/Publisher.dart';
+import 'package:flutter_application_1/widgets/PublisherInfoRow.dart';
 import 'package:intl/intl.dart';
 
 class News extends StatelessWidget {
   final String title;
   final String name;
   final String logoUrl;
-  // final Widget publisher;
   final DateTime date;
   final String category;
   final String imageUrl;
@@ -15,7 +14,6 @@ class News extends StatelessWidget {
   const News({
     super.key,
     required this.title,
-    // required this.publisher,
     required this.date,
     required this.category,
     required this.imageUrl,
@@ -27,13 +25,14 @@ class News extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 301,
+      height: 305,
       decoration: BoxDecoration(
-        color: Color.fromARGB(249, 252, 254, 255),
+        color: AppStyles.cardColor,
         borderRadius: BorderRadius.circular(10),
       ),
       padding: EdgeInsets.all(8),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             children: [
@@ -105,6 +104,7 @@ class News extends StatelessWidget {
                         name: name, 
                         logoUrl: logoUrl,
                         isVerified: true,
+                        date: date,
                       ),
                       Text(
                         DateFormat('MMM d, yyyy').format(date),

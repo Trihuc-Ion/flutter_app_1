@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/styles/app_styles.dart';
-import 'package:flutter_svg/svg.dart';
 
 class Publisher extends StatelessWidget {
   final String name;
   final String logoUrl;
   final bool isVerified;
+  final DateTime date;
 
   const Publisher({
     super.key,
     required this.name,
     required this.logoUrl,
     this.isVerified = false,
+    required this.date,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
@@ -32,12 +34,7 @@ class Publisher extends StatelessWidget {
         if (isVerified)
           Padding(
             padding: EdgeInsets.only(left: 4, top: 5, bottom: 3),
-            child: SvgPicture.asset(
-              'assets/icons/verify.svg',
-              height: 13.33,
-              width: 13.33,
-              fit: BoxFit.cover,
-            ),
+            child: Icon(Icons.verified, size: 13.33, color: Color(0xff2ABAFF)),
           ),
       ],
     );

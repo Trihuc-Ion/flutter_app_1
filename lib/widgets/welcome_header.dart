@@ -13,8 +13,6 @@ class WelcomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        left: AppStyles.horizontalPadding,
-        right: AppStyles.horizontalPadding,
         top: AppStyles.verticalPadding
         ),
       child: Column(
