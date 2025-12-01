@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
+  carousel_slider:
+    dependency: "direct main"
+    description:
+      name: carousel_slider
+      sha256: bcc61735345c9ab5cb81073896579e735f81e35fd588907a393143ea986be8ff
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.1"
   characters:
     dependency: transitive
     description:
@@ -78,19 +86,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.0"
-  flutter_svg:
-    dependency: "direct main"
-    description:
-      name: flutter_svg
-      sha256: b9c2ad5872518a27507ab432d1fb97e8813b05f0fc693f9d40fad06d073e0678
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: "5ed34a7925b85336e15d472cc4cfe7d9ebf4ab8e8b9f688585bf6b50f4c3d79a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.7.3"
   http:
     dependency: transitive
     description:
@@ -232,6 +240,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
+  svg_flutter:
+    dependency: "direct main"
+    description:
+      name: svg_flutter
+      sha256: "5d6b37ca069e5e0eaa987691dc61594674e687b5bec8fd9797877a5f331d43e1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   term_glyph:
     dependency: transitive
     description:
@@ -314,4 +330,4 @@ packages:
     version: "6.6.1"
 sdks:
   dart: ">=3.9.2 <4.0.0"
-  flutter: ">=3.29.0"
+  flutter: ">=3.27.0"

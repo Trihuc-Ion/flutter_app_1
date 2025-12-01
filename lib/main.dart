@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/page/lab1_avg_speedCalculator.dart';
-import 'package:flutter_application_1/page/lab2_homePage.dart';
-import 'package:flutter_application_1/theme/global_theme.dart';
+import 'package:flutter_app/screens/home_page.dart';
+import 'package:flutter_app/theme/global_theme.dart';
 
 void main() {
   runApp(const MyApp());
