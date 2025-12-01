@@ -1,25 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/styles/app_styles.dart';
-import 'package:flutter_application_1/widgets/PublisherInfoRow.dart';
+import 'package:flutter_app/models/enum/publisher_display_type.dart';
+import 'package:flutter_app/models/news.dart';
+import 'package:flutter_app/resources/app_colors.dart';
+import 'package:flutter_app/resources/app_dimensions.dart';
+import 'package:flutter_app/widgets/publisher_widget.dart';
 import 'package:intl/intl.dart';
 
-class News extends StatelessWidget {
-  final String title;
-  final String name;
-  final String logoUrl;
-  final DateTime date;
-  final String category;
-  final String imageUrl;
+class TrendingNewsWidget extends StatelessWidget {
+  const TrendingNewsWidget({super.key, required this.item});
 
-  const News({
-    super.key,
-    required this.title,
-    required this.date,
-    required this.category,
-    required this.imageUrl,
-    required this.name,
-    required this.logoUrl,
-  });
+  final News item;
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +17,20 @@ class News extends StatelessWidget {
       width: 301,
       height: 305,
       decoration: BoxDecoration(
-        color: AppStyles.cardColor,
-        borderRadius: BorderRadius.circular(10),
+        color: AppColors.cardColor,
+        borderRadius: AppRadius.medium,
       ),
       padding: EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          //News Image with Category
           Stack(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  imageUrl,
+                borderRadius: AppRadius.small,
+                child: Image.network(
+                  item.image,
                   height: 161,
                   width: 285,
                   fit: BoxFit.cover,
@@ -56,16 +47,12 @@ class News extends StatelessWidget {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(42, 186, 255, 1),
-                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.regularBoxCategoryColor,
+                    borderRadius: AppRadius.small,
                   ),
                   child: Text(
-                    category,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    item.category,
+                    style: TextTheme.of(context).labelSmall,
                   ),
                 ),
               ),
@@ -75,14 +62,14 @@ class News extends StatelessWidget {
           //News Title
           Padding(
             padding: const EdgeInsets.only(
-              left: AppStyles.cardBorderPadding,
-              right: AppStyles.cardBorderPadding,
+              left: 8,
+              right: 8,
               top: 12,
             ),
             child: Text(
-              title,
+              item.title,
               softWrap: true,
-              style: Theme.of(context).textTheme.displaySmall,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
 
@@ -91,8 +78,8 @@ class News extends StatelessWidget {
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(
-                horizontal: AppStyles.cardBorderPadding,
-                vertical: AppStyles.cardBorderPadding,
+                horizontal: 8,
+                vertical: 8,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -100,15 +87,10 @@ class News extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Publisher(
-                        name: name, 
-                        logoUrl: logoUrl,
-                        isVerified: true,
-                        date: date,
-                      ),
+                      PublisherWidget(publisherId: item.publisherId, displayType: PublisherDisplayType.compact),
                       Text(
-                        DateFormat('MMM d, yyyy').format(date),
-                        style: Theme.of(context).textTheme.bodyMedium,
+                        DateFormat('MMM d, yyyy').format(item.date),
+                        style: Theme.of(context).textTheme.displayMedium,
                       ),
                     ],
                   ),

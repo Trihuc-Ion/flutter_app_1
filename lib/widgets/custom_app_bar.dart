@@ -1,54 +1,93 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/styles/app_styles.dart';
-import 'package:flutter_application_1/widgets/app_icon_button.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final IconData leadingIcon;
-  final IconData actionIcon;
-  final VoidCallback onLeadingPressed;
-  final VoidCallback onActionPressed;
-  final Widget? titleWidget; 
-
   const CustomAppBar({
     super.key,
-    required this.leadingIcon,
-    required this.actionIcon,
-    required this.onLeadingPressed,
-    required this.onActionPressed,
-    this.titleWidget,
+    this.onMenuPressed,
+    this.onNotificationPressed,
+    this.username,
   });
+
+  final VoidCallback? onMenuPressed;
+  final VoidCallback? onNotificationPressed;
+  final String? username;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      elevation: 0,
-      leadingWidth: AppStyles.buttonSize + AppStyles.horizontalPadding,
-      leading: Center(
-        child: Padding(
-          padding: EdgeInsets.only(left: AppStyles.horizontalPadding),
-          child: AppIconButton(
-            icon: leadingIcon,
-            iconSize: AppStyles.iconSmall,
-            onPressed: onLeadingPressed,
-          ),
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Menu Button
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.menu, size: 24),
+                onPressed:
+                    onMenuPressed ??
+                    () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                color: Colors.black87,
+              ),
+            ),
+
+            if (username != null && username!.isNotEmpty)
+              Expanded(
+                child: Center(
+                  child: Text(
+                    username!,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black87,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ),
+              ),
+
+            // Notification Button
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 10,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.notifications_outlined, size: 24),
+                onPressed:
+                    onNotificationPressed ??
+                    () {
+                      // Default notification action
+                    },
+                color: Colors.black87,
+              ),
+            ),
+          ],
         ),
       ),
-      title: titleWidget, // ← poți pune orice Widget
-      actions: [
-        Center(
-          child: Padding(
-            padding: EdgeInsets.only(right: AppStyles.horizontalPadding),
-            child: AppIconButton(
-              icon: actionIcon,
-              iconSize: AppStyles.iconSmall,
-              onPressed: onActionPressed,
-            ),
-          ),
-        ),
-      ],
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(70);
 }

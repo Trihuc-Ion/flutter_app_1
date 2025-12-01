@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_app/resources/app_colors.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key,});
-
-  // final SearchBarListItem item;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffD9EFF9).withOpacity(0.3),
+        color: AppColors.searchbarColor,
         borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.symmetric(horizontal: 16),
       height: 48,
       child: Row(
         children: [
-          SvgPicture.asset('assets/icons/search.svg'),
+          Icon(
+            Icons.search,
+            size: 24,
+            color: AppColors.regularTitleColor,
+          ),
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(left: 16),
-              child: Text('Search "News"', style: TextTheme.of(context).bodyLarge),
+              child: Text('Search "News"', style: TextTheme.of(context).displayLarge),
             ),
           ),
         ],

@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/resources/app_colors.dart';
 
-// --- NewsHeaderBar Widget ---
-class NewsHeaderBar extends StatelessWidget {
-  const NewsHeaderBar({super.key});
+class FilterWidget extends StatelessWidget {
+  const FilterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const TextStyle sortTextStyle = TextStyle(
-      fontSize: 18,
-      color: Colors.grey, 
-    );
-    
-    const String currentSortValue = "Newest"; 
+    const String currentSortValue = "Newest";
 
     return Padding(
-      padding: const EdgeInsets.only(),
+      padding: const EdgeInsets.only(top: 32),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -23,64 +18,32 @@ class NewsHeaderBar extends StatelessWidget {
             children: [
               Text(
                 'News by Forbes',
-                style: Theme.of(context).textTheme.displayMedium,
-              ),
-
-              Row(
-                children: [
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blue, width: 1.5),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                    child: const Icon(
-                      Icons.check_box_outline_blank, 
-                      size: 18,
-                      color: Colors.blue,
-                    ),
-                  ),
-                  
-                  const SizedBox(width: 8),
-
-                  Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 1.0),
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                    child: const Icon(
-                      Icons.view_list, 
-                      size: 18,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ],
           ),
 
-          const SizedBox(height: 8), 
+          const SizedBox(height: 8),
 
           Row(
             children: [
-              const Text(
+              Text(
                 'Sort by: ',
-                style: sortTextStyle,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
-              
+
               GestureDetector(
                 onTap: () {
                   print('Sort button pressed!');
                 },
                 child: Row(
-                  mainAxisSize: MainAxisSize.min, 
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
                       currentSortValue,
-                      style: sortTextStyle.copyWith(fontWeight: FontWeight.bold, color: Colors.black87),
+                      style: TextTheme.of(context).displayLarge?.copyWith(
+                        color: AppColors.regularTitleColor,
+                      ),
                     ),
                     const Icon(
                       Icons.keyboard_arrow_down,
@@ -89,6 +52,42 @@ class NewsHeaderBar extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+
+              const Spacer(),
+
+              Row(
+                children: [
+                  Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.verifyColor, width: 1.5),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Icon(
+                      Icons.check_box_outline_blank,
+                      size: 18,
+                      color: AppColors.verifyColor,
+                    ),
+                  ),
+
+                  const SizedBox(width: 8),
+
+                  Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.regularTitleColor, width: 1.0),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                    child: Icon(
+                      Icons.view_list,
+                      size: 18,
+                      color: AppColors.regularTitleColor,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
