@@ -1,0 +1,85 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "title": "Global Summit on Climate Change: Historic Agreement Reached",
+            "category": "Environment",
+            "date": "2023-06-09",
+            "image": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg",
+            "publisher_id": 2,
+            "stats": {
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            }
+        },
+        {
+            "id": 2,
+            "title": "Tech Giant Unveils New AI-powered Smartphone",
+            "category": "Technology",
+            "date": "2023-06-08",
+            "image": "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg",
+            "publisher_id": 3,
+            "stats": {
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            }
+        },
+        {
+            "id": 3,
+            "title": "Tech Startup Secures $50 Million Funding for Expansion",
+            "category": "Business",
+            "date": "2023-06-11",
+            "image": "https://www.investopedia.com/thmb/YX7JoE_w-rJeYmBO0eTTdu82m_k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FORBES-FINAL-resized-f0f05ea3f3ce49529c325fd4c720d41b.jpg",
+            "publisher_id": 1,
+            "stats": {
+                "likes": 1240,
+                "comments": 98,
+                "shares": 56
+            },
+            "is_trending": true,
+            "is_bookmarked": false
+        },
+        {
+            "id": 4,
+            "title": "Global Markets Rally as Inflation Shows Signs of Cooling",
+            "category": "Finance",
+            "date": "2023-06-10",
+            "image": "https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg",
+            "publisher_id": 4,
+            "stats": {
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "is_trending": true,
+            "is_bookmarked": false
+        },
+        {
+            "id": 5,
+            "title": "Global CEOs Predict Market Growth in 2024",
+            "category": "Finance",
+            "date": "2023-06-10",
+            "image": "https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg",
+            "publisher_id": 1,
+            "stats": {
+                "likes": 980,
+                "comments": 76,
+                "shares": 40
+            },
+            "is_trending": true,
+            "is_bookmarked": true
+        }
+    ],
+    
+    "filters": {
+        "sort_by": [
+            "Newest",
+            "Oldest",
+            "Most Popular"
+        ],
+        "active_sort": "Newest",
+        "view_mode": "list"
+    }
+}

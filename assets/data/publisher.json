@@ -1,0 +1,54 @@
+{
+    "publisher": [
+        {
+            "id" : 1,
+            "name": "Forbes",
+            "username": "forbesnews",
+            "is_verified": true,
+            "is_following": false,
+            "logo": "https://cdn.brandfetch.io/idP48RNgRN/w/320/h/320/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1667562321843",
+            "bio": "Empowering your business journey with expert insights and influential perspectives.",
+            "stats": {
+                "news_count": 6800,
+                "followers": 2500,
+                "following": 100
+            }
+        },
+        {
+            "id" : 2,
+            "name": "BBC News",
+            "logo": "https://www.shutterstock.com/image-vector/isolated-vector-illustration-bbc-logo-600nw-2392143111.jpg",
+            "is_verified": true,
+            "is_following": false,
+            "stats": {
+                "news_count": 0,
+                "followers": 0,
+                "following": 0
+            }
+        },
+        {
+            "id" : 3,
+            "name": "NYT",
+            "logo": "https://hinsdalelibrary.info/wp-content/uploads/2022/10/nyt-app-logo-300x300-1.jpeg",
+            "is_verified": true,
+            "is_following": false,
+            "stats": {
+                "news_count": 0,
+                "followers": 0,
+                "following": 0
+            }
+        },
+        {
+            "id" : 4,
+            "name": "Bloomberg",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4qIR_ungfJBHja4c3qU-wG62W-lfU6t4NFA&s",
+            "is_verified": true,
+            "is_following": false,
+            "stats": {
+                "news_count": 0,
+                "followers": 0,
+                "following": 0
+            }
+        }
+    ]
+}
