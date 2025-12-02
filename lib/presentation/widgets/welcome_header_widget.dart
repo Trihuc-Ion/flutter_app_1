@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/controllers/user_controller.dart';
+import 'package:flutter_app/presentation/controllers/user_controller.dart';
 import 'package:get/get.dart';
 
 class WelcomeHeaderWidget extends StatelessWidget {

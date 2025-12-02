@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/models/enum/publisher_display_type.dart';
 import 'package:flutter_app/models/publisher.dart';
-import 'package:flutter_app/widgets/custom_app_bar.dart';
-import 'package:flutter_app/widgets/filter_widget.dart';
-import 'package:flutter_app/widgets/publisher_widget.dart';
-import 'package:flutter_app/widgets/recommandation_carousel.dart';
-import 'package:flutter_app/widgets/search_bar_widget.dart';
+import 'package:flutter_app/presentation/widgets/custom_app_bar.dart';
+import 'package:flutter_app/presentation/widgets/filter_widget.dart';
+import 'package:flutter_app/presentation/widgets/publisher_widget.dart';
+import 'package:flutter_app/presentation/widgets/recommandation_carousel.dart';
+import 'package:flutter_app/presentation/widgets/search_bar_widget.dart';
 
 class PublisherPage extends StatelessWidget {
   const PublisherPage({

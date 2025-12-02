@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/controllers/publisher_controller.dart';
+import 'package:flutter_app/presentation/controllers/publisher_controller.dart';
 import 'package:flutter_app/models/enum/publisher_display_type.dart';
 import 'package:flutter_app/models/publisher.dart';
 import 'package:flutter_app/resources/app_colors.dart';
 import 'package:flutter_app/resources/app_dimensions.dart';
 import 'package:flutter_app/resources/app_icons.dart';
-import 'package:flutter_app/screens/publisher_page.dart';
+import 'package:flutter_app/presentation/screens/publisher_page.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 

@@ -1,8 +1,8 @@
 // import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/controllers/news_controller.dart';
-import 'package:flutter_app/widgets/section_header_widget.dart';
-import 'package:flutter_app/widgets/trending_news_widget.dart';
+import 'package:flutter_app/presentation/controllers/news_controller.dart';
+import 'package:flutter_app/presentation/widgets/section_header_widget.dart';
+import 'package:flutter_app/presentation/widgets/trending_news_widget.dart';
 import 'package:get/get.dart';
 
 class TrendingNewsCarousel extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/controllers/news_controller.dart';
-import 'package:flutter_app/widgets/recommandation_widget.dart';
-import 'package:flutter_app/widgets/section_header_widget.dart';
+import 'package:flutter_app/presentation/controllers/news_controller.dart';
+import 'package:flutter_app/presentation/widgets/recommandation_widget.dart';
+import 'package:flutter_app/presentation/widgets/section_header_widget.dart';
 import 'package:get/get.dart';
 
 class RecommendationCarousel extends StatelessWidget {

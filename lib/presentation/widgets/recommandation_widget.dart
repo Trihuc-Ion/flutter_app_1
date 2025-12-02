@@ -3,7 +3,7 @@ import 'package:flutter_app/models/enum/publisher_display_type.dart';
 import 'package:flutter_app/models/news.dart';
 import 'package:flutter_app/resources/app_colors.dart';
 import 'package:flutter_app/resources/app_dimensions.dart';
-import 'package:flutter_app/widgets/publisher_widget.dart';
+import 'package:flutter_app/presentation/widgets/publisher_widget.dart';
 class RecommandationWidget extends StatelessWidget{
   const RecommandationWidget({super.key, required this.item});
 
